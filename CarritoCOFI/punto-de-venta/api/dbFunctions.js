@@ -39,7 +39,19 @@ function getCategoriaById(id) { return readDB().categorias.find(c => c.categoria
 
 // --- ADD ---
 function addUsuario(usuario) { const db = readDB(); db.usuarios.push(usuario); writeDB(db); }
-function addVenta(venta) { const db = readDB(); db.ventas.push(venta); writeDB(db); }
+function addVenta(venta) {
+  const db = readDB();
+  // compute next Venta_id (handle null or missing ids)
+  const maxId = db.ventas.reduce((m, v) => {
+    const id = v && (v.Venta_id ?? v.venta_id) ? Number(v.Venta_id ?? v.venta_id) : 0;
+    return Math.max(m, isNaN(id) ? 0 : id);
+  }, 0);
+  const nextId = maxId + 1;
+  venta.Venta_id = nextId;
+  db.ventas.push(venta);
+  writeDB(db);
+  return venta;
+}
 function addDetalle(detalle) { const db = readDB(); db.detalles.push(detalle); writeDB(db); }
 function addProducto(producto) { const db = readDB(); db.productos.push(producto); writeDB(db); }
 function addCategoria(categoria) { const db = readDB(); db.categorias.push(categoria); writeDB(db); }
@@ -49,6 +61,17 @@ function verificarUsuario(nombre, contra) {
   const db = readDB();
   return db.usuarios.some(u => u.Nombre === nombre && u.Contra === contra);
 }
+
+//AddVenta function
+function addVenta(venta) {
+  const db = readDB();
+  const nextId = (db.ventas.reduce((m, v) => Math.max(m, v.Venta_id || 0), 0) || 0) + 1;
+  venta.Venta_id = nextId;
+  db.ventas.push(venta);
+  writeDB(db);
+  return venta;
+}
+//End of AddVenta function
 
 module.exports = {
   getAllUsuarios,

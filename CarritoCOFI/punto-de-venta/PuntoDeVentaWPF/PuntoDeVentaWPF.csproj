@@ -1,8 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+<!--<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">-->
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <!--Change version-->
+    <TargetFramework>net6.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>false</UseWindowsForms>
     <StartupObject>PuntoDeVentaWPF.App</StartupObject>

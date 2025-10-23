@@ -48,6 +48,42 @@
       "monto_total": 313.2,
       "nit": "",
       "usuario_id": 1
+    },
+    {
+      "Venta_id": null,
+      "monto_total": 19.44,
+      "nit": "",
+      "usuario_id": 1
+    },
+    {
+      "Venta_id": null,
+      "monto_total": 8.64,
+      "nit": "",
+      "usuario_id": 1
+    },
+    {
+      "Venta_id": null,
+      "monto_total": 7.5600000000000005,
+      "nit": "",
+      "usuario_id": 1
+    },
+    {
+      "Venta_id": null,
+      "monto_total": 7.5600000000000005,
+      "nit": "",
+      "usuario_id": 1
+    },
+    {
+      "Venta_id": null,
+      "monto_total": 31.32,
+      "nit": "",
+      "usuario_id": 1
+    },
+    {
+      "Venta_id": 1,
+      "monto_total": 5.4,
+      "nit": "",
+      "usuario_id": 1
     }
   ],
   "detalles": [
@@ -148,6 +184,62 @@
       "producto_id": 4,
       "cantidad": 29,
       "precio_unitario": 10
+    },
+    {
+      "detalles_id": null,
+      "venta_id": 1,
+      "producto_id": 1,
+      "cantidad": 1,
+      "precio_unitario": 8
+    },
+    {
+      "detalles_id": null,
+      "venta_id": 1,
+      "producto_id": 8,
+      "cantidad": 1,
+      "precio_unitario": 10
+    },
+    {
+      "detalles_id": null,
+      "venta_id": 1,
+      "producto_id": 1,
+      "cantidad": 1,
+      "precio_unitario": 8
+    },
+    {
+      "detalles_id": null,
+      "venta_id": 1,
+      "producto_id": 7,
+      "cantidad": 1,
+      "precio_unitario": 7
+    },
+    {
+      "detalles_id": null,
+      "venta_id": 1,
+      "producto_id": 2,
+      "cantidad": 1,
+      "precio_unitario": 7
+    },
+    {
+      "detalles_id": null,
+      "venta_id": 1,
+      "producto_id": 2,
+      "cantidad": 2,
+      "precio_unitario": 7
+    },
+    {
+      "detalles_id": null,
+      "venta_id": 1,
+      "producto_id": 22,
+      "cantidad": 1,
+      "precio_unitario": 15
+    },
+    {
+      "detalles_id": null,
+      "venta_id": 1,
+      "producto_id": 21,
+      "cantidad": 1,
+      "precio_unitario": 5
     }
   ],
   "productos": [

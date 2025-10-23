@@ -1,14 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "hIVkYrtGjZXzF8vZJwRQ+FQN0iVWcBm0xj10MFrMv7/AuIVC2BzlOTUQkxRIcmLXGwCAvM1ekFULmabx9F4OZw==",
+  "dgSpecHash": "TS7U+EZky0jtnN3wyhC2jc54fgUY6o8/CWYmAuKizuLZb7evnW3o2cmjJM4uGeJuMzzBaCgORPfultjM5iKPJw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fabio\\OneDrive\\Documentos\\MisCosas\\IngSoftware\\CarritoCOFI\\punto-de-venta\\PuntoDeVentaWPF\\PuntoDeVentaWPF.csproj",
+  "projectFilePath": "C:\\Users\\ASUS\\Documents\\UPB Local\\UPB 4th semester\\Punto-de-ventas\\proyecto_ing_software\\CarritoCOFI\\punto-de-venta\\PuntoDeVentaWPF\\PuntoDeVentaWPF.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\fabio\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\fabio\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\fabio\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\fabio\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\fabio\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+    "C:\\Users\\ASUS\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

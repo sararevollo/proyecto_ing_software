@@ -32,6 +32,7 @@
                         <Button Content="ESCANEAR" Click="BtnEscanear_Click" Margin="6" Width="120"/>
                         <Button Content="Eliminar producto seleccionado" Click="BtnEliminar_Click" Margin="6" Width="220"/>
                         <Button Content="Iniciar pago" Click="BtnIniciarPago_Click" Margin="6" Width="140"/>
+                        <Button Content="Mostrar ticket de Venta" Click="BtnMostrarTicket_Click" Margin="6" Width="180"/>
                     </StackPanel>
 
                     <DataGrid x:Name="GridCarrito" AutoGenerateColumns="False" Height="420" SelectionMode="Single">

@@ -134,6 +134,24 @@ namespace PuntoDeVentaWPF
             }
         }
 
+        private void BtnMostrarTicket_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Open the report in the default browser and request print
+                var url = $"{API_URL}/report/ventas?print=1";
+                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo abrir el reporte: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
         private void RefreshCarritoGrid()
         {
             var view = _carrito.Items.Select((p, idx) => new

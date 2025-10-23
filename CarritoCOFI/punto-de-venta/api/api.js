@@ -38,14 +38,43 @@ app.get('/categorias/:id', (req, res) => {
   categoria ? res.json(categoria) : res.status(404).json({ error: 'Categoría no encontrada' });
 });
 
+//SUSAN REPORT
+app.get('/report/ventas', (req, res) => {
+  const ventas = db.getAllVentas();
+  const detalles = db.getAllDetalles();
+  const productos = db.getAllProductos();
+
+  // build HTML string
+  let html = '<html><head><meta charset="utf-8"><title>Reporte de Ventas</title></head><body>';
+  html += '<h1>Reporte de Ventas</h1>';
+  ventas.forEach((v, idx) => {
+    html += `<h2>Venta #${idx+1} - Total: Bs ${v.monto_total}</h2>`;
+    html += '<table border="1" cellpadding="4" cellspacing="0"><tr><th>Producto</th><th>Cantidad</th><th>Precio</th></tr>';
+    detalles.filter(d => d.venta_id == (v.Venta_id ?? idx+1)).forEach(d => {
+      const p = productos.find(px => px.producto_id == d.producto_id);
+      const name = p ? p.nombre : ('Producto ' + d.producto_id);
+      html += `<tr><td>${name}</td><td>${d.cantidad}</td><td>Bs ${d.precio_unitario}</td></tr>`;
+    });
+    html += '</table><hr/>';
+  });
+  // if print=1 is present, include a small script to auto-print when the page loads
+  const shouldPrint = req.query && (req.query.print === '1' || req.query.print === 'true');
+  if (shouldPrint) {
+    html += '<script>window.onload = function(){ window.print(); }</script>';
+  }
+  html += '</body></html>';
+  res.send(html);
+});
+//END OF SUSAN REPORT
+
 // --- ADD ---
 app.post('/usuarios', (req, res) => {
   db.addUsuario(req.body);
   res.json({ status: 'Usuario agregado' });
 });
 app.post('/ventas', (req, res) => {
-  db.addVenta(req.body);
-  res.json({ status: 'Venta agregada' });
+  const created = db.addVenta(req.body);
+  res.json(created);
 });
 app.post('/detalles', (req, res) => {
   db.addDetalle(req.body);
